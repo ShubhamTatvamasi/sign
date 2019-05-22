@@ -8,13 +8,13 @@ const publicKey = '0x65459Ed00A0Bef1e728B90dd7410b6155E1797DE'
 
 const message = 'Hello, world!'
 
-let signedData = web3.eth.accounts.sign(message, privateKey)
+const signedData = web3.eth.accounts.sign(message, privateKey)
 
 console.log(signedData);
 
 console.log('=================================');
 
-let checkSignedData = web3.eth.accounts.recover(message, signedData.signature)
+const checkSignedData = web3.eth.accounts.recover(message, signedData.signature)
 
 console.log(checkSignedData);
 
